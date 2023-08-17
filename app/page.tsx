@@ -1,39 +1,21 @@
-import Link from "next/link"
+"use client"
 
-import { siteConfig } from "@/config/site"
-import { buttonVariants } from "@/components/ui/button"
+import type { NextPage } from "next"
+import { motion as m } from "framer-motion"
 
-export default function IndexPage() {
+const Page: NextPage = () => {
   return (
-    <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
-      <div className="flex max-w-[980px] flex-col items-start gap-2">
-        <h1 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl">
-          Beautifully designed components <br className="hidden sm:inline" />
-          built with Radix UI and Tailwind CSS.
-        </h1>
-        <p className="max-w-[700px] text-lg text-muted-foreground">
-          Accessible and customizable components that you can copy and paste
-          into your apps. Free. Open Source. And Next.js 13 Ready.
-        </p>
-      </div>
-      <div className="flex gap-4">
-        <Link
-          href={siteConfig.links.docs}
-          target="_blank"
-          rel="noreferrer"
-          className={buttonVariants()}
-        >
-          Documentation
-        </Link>
-        <Link
-          target="_blank"
-          rel="noreferrer"
-          href={siteConfig.links.github}
-          className={buttonVariants({ variant: "outline" })}
-        >
-          GitHub
-        </Link>
+    <section className="  fixed flex justify-center items-center inset-0 ">
+      <span className="  bg-primary/60 absolute left-0 top-32  h-96 w-full  max-w-sm rounded-sm " />
+      <span className="   absolute -right-24 -bottom-24 aspect-square w-full  max-w-sm rounded-full " />
+      <span className="   border-[20px] border-amber-400/90 absolute  -right-24 -bottom-24 aspect-square w-full  max-w-sm rounded-full " />
+
+      <div className="font-outfit  relative  flex flex-col  ">
+        <h2 className=" capitalize">web developer </h2>
+        <p className=" pl-1">ready for work</p>
       </div>
     </section>
   )
 }
+
+export default Page

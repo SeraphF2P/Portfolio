@@ -1,4 +1,5 @@
 /** @type {import('prettier').Config} */
+// import prettierTW from 'prettier-plugin-tailwindcss'
 module.exports = {
   endOfLine: "lf",
   semi: false,

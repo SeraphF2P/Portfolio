@@ -1,52 +1,64 @@
-import Link from "next/link"
+"use client"
+
+import NextImage from "@/ui/NextImage"
+import { buttonVariants } from "@/ui/button"
+import { SocialIcon } from "react-social-icons"
 
 import { siteConfig } from "@/config/site"
-import { buttonVariants } from "@/components/ui/button"
-import { Icons } from "@/components/icons"
+import { cn } from "@/lib/utils"
 import { MainNav } from "@/components/main-nav"
-import { ThemeToggle } from "@/components/theme-toggle"
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 w-full border-b bg-background">
-      <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
+    <>
+      <header className=" fixed left-0 top-0  z-40  flex w-full  flex-col items-start  ">
+        <div className=" container   flex w-full items-center bg-slate-900/10  px-4 backdrop-blur-3xl  ">
+          <NextImage
+            priority
+            sizes="64px 64px"
+            className=" h-16  w-16  overflow-hidden  rounded-full"
+            src="https://picsum.photos/200/200.webp"
+            alt=""
+          />
+          <div className=" p-4">
+            <h4>Jafer Ali</h4>
+            <p>{siteConfig.description}</p>
+          </div>
+          <div className=" mn:h-full mn:top-0 absolute right-4  top-4 flex items-center gap-2 ">
+            <div
+              className={cn(
+                " h-2 w-2  rounded-full ",
+                siteConfig.available ? "bg-emerald-400" : "bg-red-400"
+              )}
+            ></div>
+            <p className=" text-sm">Available</p>
+          </div>
+        </div>
         <MainNav items={siteConfig.mainNav} />
-        <div className="flex flex-1 items-center justify-end space-x-4">
-          <nav className="flex items-center space-x-1">
-            <Link
-              href={siteConfig.links.github}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div
-                className={buttonVariants({
-                  size: "sm",
-                  variant: "ghost",
-                })}
-              >
-                <Icons.gitHub className="h-5 w-5" />
-                <span className="sr-only">GitHub</span>
-              </div>
-            </Link>
-            <Link
-              href={siteConfig.links.twitter}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div
-                className={buttonVariants({
-                  size: "sm",
-                  variant: "ghost",
-                })}
-              >
-                <Icons.twitter className="h-5 w-5 fill-current" />
-                <span className="sr-only">Twitter</span>
-              </div>
-            </Link>
-            <ThemeToggle />
+        <div className="fixed bottom-0 left-0  z-20 flex w-full  py-4 sm:bottom-auto sm:left-auto sm:right-4 sm:top-32  sm:w-auto  ">
+          <nav className="mn:gap-6   flex w-full  items-center justify-center gap-4 rounded-sm bg-slate-100/10 p-2 backdrop-blur-3xl sm:w-auto sm:flex-col ">
+            {siteConfig.links &&
+              siteConfig.links.map((slink) => (
+                <SocialIcon
+                  key={slink.link}
+                  rel="noopener"
+                  target="_blank"
+                  className={buttonVariants({
+                    variant: "ghost",
+                  })}
+                  style={{
+                    width: 36,
+                    height: 36,
+                    borderRadius: "50%",
+                    overflow: "hidden",
+                  }}
+                  url={slink.link}
+                  bgColor="white"
+                />
+              ))}
           </nav>
         </div>
-      </div>
-    </header>
+      </header>
+    </>
   )
 }
