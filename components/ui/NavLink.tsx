@@ -28,9 +28,9 @@ function NavLink(props: NavLinkProps) {
       {isActive && (
         <m.div
           layout
-          layoutId="main-nav-background"
+          layoutId="main-nav-underline-animation"
           transition={{ duration: 0.4, ease: "linear" }}
-          className=" absolute -bottom-0.5 left-0 h-0.5 w-full rounded-sm bg-indigo-600  sm:-left-4 sm:bottom-0 sm:h-full sm:w-4 sm:rounded-none sm:[clip-path:polygon(0_0,50%_50%,0_100%,0_0)] "
+          className=" absolute -bottom-0.5 left-0 h-0.5 w-full rounded-sm bg-indigo-600 sm:bg-slate-100  sm:-left-4 sm:bottom-0 sm:h-full sm:w-4 sm:rounded-none sm:[clip-path:polygon(0_0,50%_50%,0_100%,0_0)] "
         ></m.div>
       )}
     </div>

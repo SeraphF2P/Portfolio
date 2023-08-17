@@ -1,10 +1,8 @@
-"use client"
+import { Landing } from "@/sections/Landing"
 
 import "@/styles/globals.css"
 import { Metadata } from "next"
-import { Landing } from "@/sections/Landing"
 import BgGradieant from "@/ui/BgGradieant"
-import { AnimatePresence } from "framer-motion"
 
 import { siteConfig } from "@/config/site"
 import { fontOutfit, fontSans } from "@/lib/fonts"
