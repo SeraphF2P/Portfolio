@@ -1,6 +1,8 @@
 "use client"
 
 import Link from "next/link"
+import { useResizeObserver } from "@mantine/hooks"
+import { motion as m } from "framer-motion"
 
 import NextImage from "./ui/NextImage"
 
@@ -24,12 +26,9 @@ export function Card({
   errors,
   isFinished,
 }: ProjectType) {
+  const [ref, { width: refWidth }] = useResizeObserver()
   return (
-    <Link
-      href={url}
-      target="_blank"
-      className=" block h-96 w-full max-w-xs cursor-pointer overflow-hidden rounded bg-slate-50/10 p-2  shadow  shadow-slate-50/30 backdrop-blur-sm transition-[colors_scale] duration-300 hover:scale-105   hover:bg-slate-100/30  "
-    >
+    <div className=" block  h-96 w-full max-w-xs cursor-pointer overflow-hidden rounded bg-slate-50/10 p-2  shadow  shadow-slate-50/30 backdrop-blur-sm transition-[colors_scale] duration-300 hover:scale-105   hover:bg-slate-100/30  ">
       <div className=" bg-background/10 relative  h-full w-full overflow-hidden  rounded-sm   shadow-inner shadow-slate-950 ">
         <NextImage
           className="  aspect-video w-full opacity-80 "
@@ -38,23 +37,34 @@ export function Card({
         />
         <div className="px-4 py-2  ">
           <h3 className=" flex gap-1 text-2xl  capitalize">{name}</h3>
-          <div className="   remove-scroll-bar  flex h-[34px] max-h-[34px] w-full flex-wrap items-center justify-start gap-1 overflow-y-scroll py-1 text-sm capitalize sm:max-h-[100px]  ">
-            {isFinished == false && (
-              <div className=" rounded-sm bg-emerald-100 px-2 py-1 text-emerald-500 shadow-sm shadow-slate-700">
-                in progress
-              </div>
-            )}
-            {errors &&
-              errors.map((tec) => (
-                <div className=" rounded-sm bg-red-100 px-2 py-1 text-red-500 shadow-sm shadow-slate-700">
+          <div className="h-8 overflow-hidden  w-full ">
+            <m.div
+              ref={ref}
+              drag="x"
+              dragConstraints={{
+                left: 4,
+                right: -refWidth,
+              }}
+              draggable
+              className="  whitespace-nowrap  min-w-full    flex h-8     items-center justify-start gap-1  py-1 text-sm capitalize "
+            >
+              {isFinished == false && (
+                <div className=" rounded-sm bg-emerald-100 px-2 py-1 text-emerald-500 shadow-sm shadow-slate-700">
+                  in progress
+                </div>
+              )}
+              {errors &&
+                errors.map((tec) => (
+                  <div className=" rounded-sm bg-red-100 px-2 py-1 text-red-500 shadow-sm shadow-slate-700">
+                    {tec}
+                  </div>
+                ))}
+              {tec.map((tec) => (
+                <div className=" bg-background rounded-sm px-2 py-1 shadow-sm shadow-slate-700">
                   {tec}
                 </div>
               ))}
-            {tec.map((tec) => (
-              <div className=" bg-background rounded-sm px-2 py-1 shadow-sm shadow-slate-700">
-                {tec}
-              </div>
-            ))}
+            </m.div>
           </div>
 
           <p className=" remove-scroll-bar  mt-2 h-36  overflow-y-scroll pb-4 ">
@@ -62,6 +72,6 @@ export function Card({
           </p>
         </div>
       </div>
-    </Link>
+    </div>
   )
 }

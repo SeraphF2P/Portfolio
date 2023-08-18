@@ -67,7 +67,7 @@ export const siteConfig = {
       ],
       url: "https://bloger-website-seraphf2p.vercel.app/",
       description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui fugiat, sequi laudantium non tempora officiis veniam distinctio natus reprehenderit id at deleniti ipsum itaque temporibus eius odit quos soluta enim laborum eligendi. Illo, dolorum non aperiam porro recusandae nostrum tempora!",
+        "bloger website more of a facebook app for blog articles ",
     },
     {
       id: 2,
@@ -78,7 +78,7 @@ export const siteConfig = {
       tec: ["Next", "tailwindcss", "headless ui"],
       url: "https://multi-step-form-eok7-399yvwxfg-seraphf2p.vercel.app/",
       description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui fugiat, sequi laudantium non tempora officiis veniam distinctio natus reprehenderit id at deleniti ipsum itaque temporibus eius odit quos soluta enim laborum eligendi. Illo, dolorum non aperiam porro recusandae nostrum tempora!",
+        " a step by step form its just a demo no data will be used",
     },
     {
       id: 3,
@@ -89,7 +89,7 @@ export const siteConfig = {
       tec: [" Next", "prisma", "jwt", "tailwindcss", "headless ui "],
       url: "https://shorty-omega.vercel.app/",
       description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui fugiat, sequi laudantium non tempora officiis veniam distinctio natus reprehenderit id at deleniti ipsum itaque temporibus eius odit quos soluta enim laborum eligendi. Illo, dolorum non aperiam porro recusandae nostrum tempora!",
+        " url shortener website with authantication",
     },
     {
       id: 4,
@@ -106,7 +106,7 @@ export const siteConfig = {
       ],
       url: "https://radiant-c986ebl8i-seraphf2p.vercel.app/",
       description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui fugiat, sequi laudantium non tempora officiis veniam distinctio natus reprehenderit id at deleniti ipsum itaque temporibus eius odit quos soluta enim laborum eligendi. Illo, dolorum non aperiam porro recusandae nostrum tempora!",
+        "cosmatique product website consest of three pages ",
     },
     {
       id: 5,
