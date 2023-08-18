@@ -2,6 +2,7 @@ export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
   name: "jafer ali portfolio",
+  "my-photo": "/my-pic.jpg",
   description: "Front-end React/Next developer",
   available: true,
   mainNav: [

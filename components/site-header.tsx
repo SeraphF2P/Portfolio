@@ -17,7 +17,7 @@ export function SiteHeader() {
             priority
             sizes="64px 64px"
             className=" h-16  w-16  overflow-hidden  rounded-full"
-            src="https://picsum.photos/200/200.webp"
+            src={siteConfig["my-photo"]}
             alt=""
           />
           <div className=" p-4">

@@ -5,10 +5,10 @@ import { motion as m } from "framer-motion"
 
 const Page: NextPage = () => {
   return (
-    <section className="  fixed flex justify-center items-center inset-0 ">
+    <section className="  fixed inset-0 flex items-center justify-center ">
       <span className="  bg-primary/60 absolute left-0 top-32  h-96 w-full  max-w-sm rounded-sm " />
-      <span className="   absolute -right-24 -bottom-24 aspect-square w-full  max-w-sm rounded-full " />
-      <span className="   border-[20px] border-amber-400/90 absolute  -right-24 -bottom-24 aspect-square w-full  max-w-sm rounded-full " />
+      <span className="   absolute -bottom-24 -right-24 aspect-square w-full  max-w-sm rounded-full " />
+      <span className="   absolute -bottom-24 -right-24  aspect-square w-full max-w-sm rounded-full  border-[20px] border-yellow-300/90 " />
 
       <div className="font-outfit  relative  flex flex-col  ">
         <h2 className=" capitalize">web developer </h2>

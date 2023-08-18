@@ -33,7 +33,7 @@ const ProjectsSlider: FC<ProjectsSliderProps> = ({}) => {
         // style={{
         //   y: useMotionTemplate`${y}%`,
         // }}
-        className=" py-32 px-10  relative overflow-y-scroll h-screen scrollbar-track-primary/40 scrollbar-w-1 scrollbar-thumb-primary scrollbar-thumb-rounded-full   scrollbar-thumb-slate-50/80 scrollbar  flex flex-wrap justify-center gap-4  mx-auto     "
+        className=" scrollbar-track-primary/40 scrollbar-w-1  scrollbar-thumb-primary scrollbar-thumb-rounded-full scrollbar-thumb-slate-50/80 scrollbar relative mx-auto flex   h-screen flex-wrap  justify-center gap-4 overflow-y-scroll px-10  py-32     "
       >
         {projects &&
           projects

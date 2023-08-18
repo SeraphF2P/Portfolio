@@ -28,7 +28,7 @@ export function Card({
     <Link
       href={url}
       target="_blank"
-      className=" block max-w-xs w-full h-96 cursor-pointer overflow-hidden rounded bg-slate-50/10 p-2  shadow  shadow-slate-50/30 backdrop-blur-sm transition-[colors_scale] duration-300 hover:scale-105   hover:bg-slate-100/30  "
+      className=" block h-96 w-full max-w-xs cursor-pointer overflow-hidden rounded bg-slate-50/10 p-2  shadow  shadow-slate-50/30 backdrop-blur-sm transition-[colors_scale] duration-300 hover:scale-105   hover:bg-slate-100/30  "
     >
       <div className=" bg-background/10 relative  h-full w-full overflow-hidden  rounded-sm   shadow-inner shadow-slate-950 ">
         <NextImage
@@ -38,15 +38,15 @@ export function Card({
         />
         <div className="px-4 py-2  ">
           <h3 className=" flex gap-1 text-2xl  capitalize">{name}</h3>
-          <div className="   h-[34px]  remove-scroll-bar flex max-h-[34px] w-full flex-wrap items-center justify-start gap-1 overflow-y-scroll py-1 text-sm capitalize sm:max-h-[100px]  ">
+          <div className="   remove-scroll-bar  flex h-[34px] max-h-[34px] w-full flex-wrap items-center justify-start gap-1 overflow-y-scroll py-1 text-sm capitalize sm:max-h-[100px]  ">
             {isFinished == false && (
-              <div className=" bg-emerald-100 text-emerald-500 rounded-sm px-2 py-1 shadow-sm shadow-slate-700">
+              <div className=" rounded-sm bg-emerald-100 px-2 py-1 text-emerald-500 shadow-sm shadow-slate-700">
                 in progress
               </div>
             )}
             {errors &&
               errors.map((tec) => (
-                <div className=" bg-red-100 text-red-500 rounded-sm px-2 py-1 shadow-sm shadow-slate-700">
+                <div className=" rounded-sm bg-red-100 px-2 py-1 text-red-500 shadow-sm shadow-slate-700">
                   {tec}
                 </div>
               ))}

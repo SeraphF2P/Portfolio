@@ -1,7 +1,12 @@
 "use client"
 
 import { FC, useLayoutEffect, useRef } from "react"
-import { Canvas, PerspectiveCameraProps, useThree } from "@react-three/fiber"
+import {
+  Canvas,
+  MeshProps,
+  PerspectiveCameraProps,
+  useThree,
+} from "@react-three/fiber"
 import { motion as m, useTime, useTransform } from "framer-motion"
 import { motion } from "framer-motion-3d"
 
@@ -41,7 +46,7 @@ export function Lights() {
   )
 }
 
-export function Icosahedron(props) {
+export function Icosahedron(props: MeshProps) {
   return (
     <motion.mesh {...props}>
       <icosahedronGeometry args={[3, 0]} />

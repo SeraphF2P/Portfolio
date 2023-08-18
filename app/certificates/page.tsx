@@ -6,8 +6,8 @@ import { siteConfig } from "../../config/site"
 
 const Page: NextPage = () => {
   return (
-    <div className="  bg-primary/70 pr-1  w-full backdrop-blur-md flex justify-center  relative h-96 translate-y-1/3 ">
-      <div className=" justify-center flex  scrollbar-track-primary/40 scrollbar-w-1 scrollbar-thumb-rounded-full   scrollbar-thumb-slate-50/80 scrollbar gap-4 p-4  flex sm:px-40 flex-wrap overflow-y-scroll   relative  ">
+    <div className="  bg-primary/70 relative  flex h-96 w-full translate-y-1/3  justify-center pr-1 backdrop-blur-md ">
+      <div className=" scrollbar-track-primary/40 scrollbar-w-1  scrollbar-thumb-rounded-full scrollbar-thumb-slate-50/80 scrollbar   relative flex flex-wrap  justify-center gap-4 overflow-y-scroll p-4   sm:px-40  ">
         {siteConfig.certificates.map((exp) => (
           <Section {...exp} />
         ))}
@@ -23,10 +23,10 @@ const Section = (props: {
   Credential_ID: string
 }) => {
   return (
-    <div className="truncate  font-outfit border-primary flex max-w-[320px] w-full  origin-center  flex-col items-start   border-4   p-4  shadow-2xl  transition-[transform_colors] hover:scale-105  hover:bg-slate-200/10 ">
+    <div className="font-outfit  border-primary flex w-full max-w-[320px] origin-center  flex-col  items-start truncate   border-4   p-4  shadow-2xl  transition-[transform_colors] hover:scale-105  hover:bg-slate-200/10 ">
       <h3 className=" font-semibold capitalize">{props.name}</h3>
       <p className=" my-4 ">{props.Issuing_organization}</p>
-      <div className=" flex gap-1 items-center">
+      <div className=" flex items-center gap-1">
         <p className="   ">{props.Credential_ID}</p>
         <Link href={props.Credential_URL}>
           <LinkIcon width={24} />
