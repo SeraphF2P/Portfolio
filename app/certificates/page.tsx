@@ -6,7 +6,7 @@ import { siteConfig } from "../../config/site"
 
 const Page: NextPage = () => {
   return (
-    <div className="  bg-primary/70 relative  flex h-96 w-full translate-y-1/3  justify-center pr-1 backdrop-blur-md ">
+    <div className="  bg-primary/70 relative  top-32 flex h-[500px] w-full justify-center  pr-1 backdrop-blur-md sm:h-96 ">
       <div className=" scrollbar-track-primary/40 scrollbar-w-1  scrollbar-thumb-rounded-full scrollbar-thumb-slate-50/80 scrollbar   relative flex flex-wrap  justify-center gap-4 overflow-y-scroll p-4   sm:px-40  ">
         {siteConfig.certificates.map((exp) => (
           <Section {...exp} />

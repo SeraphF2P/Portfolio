@@ -8,10 +8,10 @@ import { siteConfig } from "../../config/site"
 const Page: NextPage = () => {
   return (
     <m.div
-      initial={{ scaleY: 0, y: "33.33%" }}
-      animate={{ scaleY: 1, y: "33.33%" }}
+      initial={{ scaleY: 0 }}
+      animate={{ scaleY: 1 }}
       transition={{ duration: 1 }}
-      className="   bg-primary/70 relative flex h-96 w-full origin-right justify-center  pr-1 backdrop-blur-md  "
+      className="   bg-primary/70 relative top-32 flex h-[500px] w-full origin-right justify-center pr-1  backdrop-blur-md sm:h-96  "
     >
       <div className=" scrollbar-track-primary/40 scrollbar-w-1  scrollbar-thumb-rounded-full scrollbar-thumb-slate-50/80 scrollbar   relative flex flex-wrap  justify-center gap-4 overflow-y-scroll p-4   sm:px-40  ">
         {siteConfig.experiances.map((exp) => (

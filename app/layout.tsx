@@ -35,14 +35,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <html lang="en" suppressHydrationWarning>
         <body
           className={cn(
-            "bg-background  remove-scroll-bar relative  min-h-screen  font-sans antialiased ",
+            "bg-background scrollbar-track-primary/40 scrollbar-w-1  scrollbar-thumb-primary scrollbar-thumb-rounded-full scrollbar relative  h-screen  font-sans antialiased ",
             fontSans.variable,
             fontOutfit.variable
           )}
         >
           <BgGradieant />
           <SiteHeader />
-          <main className="  relative      h-screen">
+          <main className="  relative h-screen   ">
             <Landing />
             {children}
           </main>

@@ -18,39 +18,20 @@ const projects = siteConfig.projects
 const timer = 25
 
 const ProjectsSlider: FC<ProjectsSliderProps> = ({}) => {
-  // const y = useMotionValue(100)
-  // const animation = animate(y, -100, {
-  //   duration: timer,
-  //   repeat: Infinity,
-  //   ease: "linear",
-  //   repeatType: "loop",
-  //   autoplay: true,
-  // })
-
   return (
     <>
-      <m.div
-        // style={{
-        //   y: useMotionTemplate`${y}%`,
-        // }}
-        className=" scrollbar-track-primary/40 scrollbar-w-1  scrollbar-thumb-primary scrollbar-thumb-rounded-full scrollbar-thumb-slate-50/80 scrollbar relative mx-auto flex   h-screen flex-wrap  justify-center gap-4 overflow-y-scroll px-10  py-32     "
-      >
+      <div className="  remove-scroll-bar relative mx-auto  flex flex-wrap  justify-center gap-4 overflow-y-scroll  py-40 sm:py-24    ">
         {projects &&
           projects
             .sort(() => Math.random() - 0.5)
-            .map((project, index) => {
+            .map((project) => {
               return (
-                <m.div
-                  key={"slider-" + project.id}
-                  // onHoverStart={() => animation.pause()}
-                  // onHoverEnd={() => animation.play()}
-                  className=" relative "
-                >
+                <div key={project.image} className=" relative ">
                   <Card {...project} />
-                </m.div>
+                </div>
               )
             })}
-      </m.div>
+      </div>
     </>
   )
 }

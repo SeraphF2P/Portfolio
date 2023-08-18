@@ -28,16 +28,16 @@ export function Card({
 }: ProjectType) {
   const [ref, { width: refWidth }] = useResizeObserver()
   return (
-    <div className=" block  h-96 w-full max-w-xs cursor-pointer overflow-hidden rounded bg-slate-50/10 p-2  shadow  shadow-slate-50/30 backdrop-blur-sm transition-[colors_scale] duration-300 hover:scale-105   hover:bg-slate-100/30  ">
+    <div className=" xs:max-w-xs  block h-96 w-full max-w-[300px] cursor-pointer overflow-hidden rounded bg-slate-50/10 p-2  shadow  shadow-slate-50/30 backdrop-blur-sm transition-[colors_scale] duration-300 hover:scale-105   hover:bg-slate-100/30  ">
       <div className=" bg-background/10 relative  h-full w-full overflow-hidden  rounded-sm   shadow-inner shadow-slate-950 ">
         <NextImage
           className="  aspect-video w-full opacity-80 "
           src={"/" + image}
-          alt={"project-" + id}
+          alt={"project-" + name}
         />
         <div className="px-4 py-2  ">
           <h3 className=" flex gap-1 text-2xl  capitalize">{name}</h3>
-          <div className="h-8 overflow-hidden  w-full ">
+          <div className="h-8 w-full  overflow-hidden ">
             <m.div
               ref={ref}
               drag="x"
@@ -45,8 +45,8 @@ export function Card({
                 left: 4,
                 right: -refWidth,
               }}
-              draggable
-              className="  whitespace-nowrap  min-w-full    flex h-8     items-center justify-start gap-1  py-1 text-sm capitalize "
+              draggable={refWidth > 300 ? true : false}
+              className="  flex    h-8 items-center     justify-start gap-1 whitespace-nowrap  py-1 text-sm capitalize "
             >
               {isFinished == false && (
                 <div className=" rounded-sm bg-emerald-100 px-2 py-1 text-emerald-500 shadow-sm shadow-slate-700">
@@ -55,12 +55,18 @@ export function Card({
               )}
               {errors &&
                 errors.map((tec) => (
-                  <div className=" rounded-sm bg-red-100 px-2 py-1 text-red-500 shadow-sm shadow-slate-700">
+                  <div
+                    key={tec}
+                    className=" rounded-sm bg-red-100 px-2 py-1 text-red-500 shadow-sm shadow-slate-700"
+                  >
                     {tec}
                   </div>
                 ))}
               {tec.map((tec) => (
-                <div className=" bg-background rounded-sm px-2 py-1 shadow-sm shadow-slate-700">
+                <div
+                  key={tec}
+                  className=" bg-background rounded-sm px-2 py-1 shadow-sm shadow-slate-700"
+                >
                   {tec}
                 </div>
               ))}
