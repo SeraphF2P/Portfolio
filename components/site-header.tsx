@@ -53,7 +53,7 @@ export function SiteHeader() {
                       />
                       <Icon
                         name="whatsup"
-                        className=" group-hover:fill-primary m-auto h-6 w-6 text-black transition-colors"
+                        className=" group-hover:fill-primary m-auto h-6 w-6 fill-black transition-colors"
                       />
                     </div>
                   )
@@ -70,6 +70,7 @@ export function SiteHeader() {
                       height: 36,
                       borderRadius: "50%",
                       overflow: "hidden",
+                      color: "#000",
                     }}
                     url={slink.link}
                     bgColor="white"

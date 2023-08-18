@@ -16,7 +16,10 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "red" },
+    {
+      media: "(prefers-color-scheme: light)",
+      color: "hsl(var(--primary))",
+    },
     { media: "(prefers-color-scheme: dark)", color: "black" },
   ],
   icons: {
@@ -35,17 +38,15 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <html lang="en" suppressHydrationWarning>
         <body
           className={cn(
-            "bg-background scrollbar-track-primary/40 scrollbar-w-1  scrollbar-thumb-primary scrollbar-thumb-rounded-full scrollbar relative  h-screen  font-sans antialiased ",
+            "bg-background  relative  h-screen  font-sans antialiased ",
             fontSans.variable,
             fontOutfit.variable
           )}
         >
           <BgGradieant />
           <SiteHeader />
-          <main className="  relative h-screen   ">
-            <Landing />
-            {children}
-          </main>
+          <Landing />
+          <main className=" min-h-screen ">{children}</main>
         </body>
       </html>
     </>

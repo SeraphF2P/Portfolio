@@ -4,7 +4,8 @@ import Link from "next/link"
 import { useResizeObserver } from "@mantine/hooks"
 import { motion as m } from "framer-motion"
 
-import NextImage from "./ui/NextImage"
+import Icon from "../icons"
+import NextImage from "./NextImage"
 
 type ProjectType = {
   id: number
@@ -36,7 +37,12 @@ export function Card({
           alt={"project-" + name}
         />
         <div className="px-4 py-2  ">
-          <h3 className=" flex gap-1 text-2xl  capitalize">{name}</h3>
+          <div className="flex items-center justify-center gap-2 py-2">
+            <h3 className=" flex gap-1 text-2xl  capitalize">{name}</h3>
+            <Link href={url} target="_blank" rel="noopener">
+              <Icon className=" h-4 w-4 " name="externalLink" />
+            </Link>
+          </div>
           <div className="h-8 w-full  overflow-hidden ">
             <m.div
               ref={ref}

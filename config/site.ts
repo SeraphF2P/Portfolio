@@ -82,7 +82,7 @@ export const siteConfig = {
     },
     {
       id: 3,
-      name: "url shortener website",
+      name: "url shortener",
       image: "shorty.png",
       isFinished: true,
       errors: ["no database"],
