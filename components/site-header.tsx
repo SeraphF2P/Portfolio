@@ -15,7 +15,7 @@ export function SiteHeader() {
   return (
     <>
       <header className=" fixed left-0 top-0  z-40  flex w-full  flex-col items-start  ">
-        <div className=" container flex   w-full items-center bg-slate-900/10 px-4  py-2 backdrop-blur-3xl  ">
+        <div className=" container flex   w-full items-center bg-slate-900/10 px-4   backdrop-blur-3xl  ">
           <NextImage
             priority
             sizes="64px 64px"
@@ -56,7 +56,7 @@ export function SiteHeader() {
                       />
                       <Icon
                         name="whatsup"
-                        className=" group-hover:fill-primary m-auto h-6 w-6 fill-black/50 transition-colors"
+                        className=" group-hover:fill-primary m-auto h-6 w-6 fill-black/90 transition-colors"
                       />
                     </div>
                   )

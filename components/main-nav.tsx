@@ -20,19 +20,11 @@ export function MainNav({ items }: MainNavProps) {
         <m.nav
           ref={ref}
           drag="x"
-          initial={false}
           dragConstraints={{
             left: vWight < 420 ? vWight - refWidth : 0,
             right: vWight - refWidth,
           }}
           draggable={vWight < 640 ? "true" : "false"}
-          transition={{ duration: 1 }}
-          style={{
-            y: useMotionTemplate`-${scrollY}px`,
-          }}
-          transformTemplate={({ y }) => {
-            return vWight < 640 ? `translateY(${y})` : "none"
-          }}
           className="flex gap-4 sm:h-[352px]   sm:flex-col sm:items-start sm:justify-between  sm:gap-6 sm:py-2"
         >
           {items?.map(
