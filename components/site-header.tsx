@@ -44,7 +44,10 @@ export function SiteHeader() {
               siteConfig.links.map((slink) => {
                 if (slink.name == "whatsup")
                   return (
-                    <div className=" group relative grid h-9 w-9 !rounded-full bg-white">
+                    <div
+                      key={slink.link}
+                      className=" group relative grid h-9 w-9 !rounded-full bg-white"
+                    >
                       <Link
                         rel="noopener"
                         target="_blank"
@@ -53,7 +56,7 @@ export function SiteHeader() {
                       />
                       <Icon
                         name="whatsup"
-                        className=" group-hover:fill-primary m-auto h-6 w-6 fill-black transition-colors"
+                        className=" group-hover:fill-primary m-auto h-6 w-6 fill-black/50 transition-colors"
                       />
                     </div>
                   )
@@ -70,7 +73,6 @@ export function SiteHeader() {
                       height: 36,
                       borderRadius: "50%",
                       overflow: "hidden",
-                      color: "#000",
                     }}
                     url={slink.link}
                     bgColor="white"

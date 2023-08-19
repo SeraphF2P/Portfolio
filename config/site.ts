@@ -19,6 +19,10 @@ export const siteConfig = {
       path: "/experiance",
     },
     {
+      title: "skills",
+      path: "/skills",
+    },
+    {
       title: "certificates",
       path: "/certificates",
     },
@@ -66,8 +70,7 @@ export const siteConfig = {
         "radix ui",
       ],
       url: "https://bloger-website-seraphf2p.vercel.app/",
-      description:
-        "bloger website more of a facebook app for blog articles ",
+      description: "bloger website more of a facebook app for blog articles ",
     },
     {
       id: 2,
@@ -77,8 +80,7 @@ export const siteConfig = {
       errors: null,
       tec: ["Next", "tailwindcss", "headless ui"],
       url: "https://multi-step-form-eok7-399yvwxfg-seraphf2p.vercel.app/",
-      description:
-        " a step by step form its just a demo no data will be used",
+      description: " a step by step form its just a demo no data will be used",
     },
     {
       id: 3,
@@ -88,8 +90,7 @@ export const siteConfig = {
       errors: ["no database"],
       tec: [" Next", "prisma", "jwt", "tailwindcss", "headless ui "],
       url: "https://shorty-omega.vercel.app/",
-      description:
-        " url shortener website with authantication",
+      description: " url shortener website with authantication",
     },
     {
       id: 4,
@@ -105,8 +106,7 @@ export const siteConfig = {
         "react router dom",
       ],
       url: "https://radiant-c986ebl8i-seraphf2p.vercel.app/",
-      description:
-        "cosmatique product website consest of three pages ",
+      description: "cosmatique product website consest of three pages ",
     },
     {
       id: 5,
@@ -132,6 +132,88 @@ export const siteConfig = {
       title: "React tuoter",
       duration: "~",
       info: " react front-end developer internship ",
+    },
+  ],
+  skills: [
+    {
+      id: 1,
+      name: "typscript",
+      level: 90,
+    },
+    {
+      id: 2,
+      name: "javascript",
+      level: 100,
+    },
+    {
+      id: 3,
+      name: "sass",
+      level: 50,
+    },
+    {
+      id: 4,
+      name: "tailwind",
+      level: 90,
+    },
+    {
+      id: 5,
+      name: "bootstrap",
+      level: 70,
+    },
+    {
+      id: 6,
+      name: "framer motion",
+      level: 80,
+    },
+    {
+      id: 7,
+      name: "php",
+      level: 60,
+    },
+    {
+      id: 8,
+      name: "laravel",
+      level: 60,
+    },
+    {
+      id: 9,
+      name: "three js",
+      level: 30,
+    },
+    {
+      id: 10,
+      name: "next",
+      level: 80,
+    },
+    {
+      id: 11,
+      name: "prisma",
+      level: 70,
+    },
+    {
+      id: 12,
+      name: "TRPC",
+      level: 40,
+    },
+    {
+      id: 13,
+      name: "RTQ",
+      level: 70,
+    },
+    {
+      id: 14,
+      name: "react fiber",
+      level: 30,
+    },
+    {
+      id: 15,
+      name: "next auth",
+      level: 30,
+    },
+    {
+      id: 16,
+      name: "SQL",
+      level: 50,
     },
   ],
   certificates: [

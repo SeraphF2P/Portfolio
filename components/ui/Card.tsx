@@ -49,7 +49,7 @@ export function Card({
               drag="x"
               dragConstraints={{
                 left: 4,
-                right: -refWidth,
+                right: 300 - refWidth,
               }}
               draggable={refWidth > 300 ? true : false}
               className="  flex    h-8 items-center     justify-start gap-1 whitespace-nowrap  py-1 text-sm capitalize "
