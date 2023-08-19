@@ -19,7 +19,7 @@ export function SiteHeader() {
           <NextImage
             priority
             sizes="64px 64px"
-            className=" h-16  w-16  overflow-hidden  rounded-full"
+            className=" h-16  w-16    overflow-hidden  rounded-full"
             src={siteConfig["my-photo"]}
             alt="profile photo"
           />

@@ -1,7 +1,7 @@
 "use client"
 
 import { useResizeObserver, useViewportSize } from "@mantine/hooks"
-import { motion as m, useMotionTemplate, useScroll } from "framer-motion"
+import { motion as m } from "framer-motion"
 
 import NavLink from "./ui/NavLink"
 
@@ -12,8 +12,6 @@ interface MainNavProps {
 export function MainNav({ items }: MainNavProps) {
   const { width: vWight } = useViewportSize()
   const [ref, { width: refWidth }] = useResizeObserver()
-  const { scrollY } = useScroll()
-
   return (
     <div className="mn:justify-center flex items-center justify-start   gap-6 overflow-hidden py-1 sm:fixed    sm:left-4 sm:top-32  sm:overflow-visible    ">
       {items?.length ? (
@@ -21,7 +19,7 @@ export function MainNav({ items }: MainNavProps) {
           ref={ref}
           drag="x"
           dragConstraints={{
-            left: vWight < 420 ? vWight - refWidth : 0,
+            left: 0,
             right: vWight - refWidth,
           }}
           draggable={vWight < 640 ? "true" : "false"}
