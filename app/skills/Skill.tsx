@@ -11,7 +11,7 @@ const variants: Variants = {
 }
 const maxSize = 160
 const intmationLevel = {
-  begginer: "lime",
+  begginer: "blue",
   intemate: "orangered",
   expert: "#728",
 }
@@ -34,7 +34,7 @@ const Skill: FC<SkillProps> = ({ id, level, name }) => {
         position: "absolute",
         borderColor: intmationLevel[professional],
       }}
-      initial={{ top: "100%", left: `calc(calc(100% - ${size}px) / 2)` }}
+      initial={{ top: "100%", left: `calc((100% - ${size}px) / 2)` }}
       animate={{
         top: `max(calc(${randomizerY}% - ${size}px), 0px)`,
         left: `max(calc(${randomizerX}% - ${size}px), 0px)`,

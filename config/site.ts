@@ -131,7 +131,7 @@ export const siteConfig = {
       id: 2,
       title: "React tuoter",
       duration: "~",
-      info: " react front-end developer internship ",
+      info: " teaching react for web development at NEN  ",
     },
   ],
   skills: [
@@ -212,7 +212,7 @@ export const siteConfig = {
     },
     {
       id: 16,
-      name: "SQL",
+      name: "MySQL",
       level: 50,
     },
   ],
