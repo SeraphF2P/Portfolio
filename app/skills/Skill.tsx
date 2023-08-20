@@ -34,7 +34,7 @@ const Skill: FC<SkillProps> = ({ id, level, name }) => {
         position: "absolute",
         borderColor: intmationLevel[professional],
       }}
-      initial={{ top: "100%", left: `calc((100% - ${size}px) / 2)px` }}
+      initial={{ top: "100%", left: `calc(calc(100% - ${size}px) / 2)` }}
       animate={{
         top: `max(calc(${randomizerY}% - ${size}px), 0px)`,
         left: `max(calc(${randomizerX}% - ${size}px), 0px)`,
@@ -43,7 +43,7 @@ const Skill: FC<SkillProps> = ({ id, level, name }) => {
         duration: 1,
         ease: "linear",
       }}
-      className="  text-sm font-semibold  overflow-hidden  hover:border-8 transition-[border-width] duration-1000    border-4 text-center shadow  cursor-none rounded-full  flex justify-center items-center  capitalize backdrop-blur"
+      className="  text-sm font-semibold  overflow-hidden  hover:border-8 transition-[border-width] duration-1000    border-2 text-center shadow  cursor-none rounded-full  flex justify-center items-center  capitalize backdrop-blur"
     >
       {name}
       <FlowAnimation
@@ -60,6 +60,13 @@ const Skill: FC<SkillProps> = ({ id, level, name }) => {
           rotate: "45deg",
         }}
       />
+      <m.span
+        variants={{ animate: { opacity: 1 } }}
+        transition={{ delay: 0.4 }}
+        className=" opacity-0 absolute"
+      >
+        {level}%
+      </m.span>
     </m.div>
   )
 }
@@ -83,7 +90,7 @@ const FlowAnimation = ({
         rotate: rotate,
       }}
       transition={{ duration: 1, ease: "linear" }}
-      className=" rounded-[28%] -z-10 absolute w-[200%]  h-[200%]"
+      className=" rounded-[28%]  absolute w-[200%]  h-[200%]"
     />
   )
 }
