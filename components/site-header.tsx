@@ -38,7 +38,7 @@ export function SiteHeader() {
           </div>
         </div>
         <MainNav items={siteConfig.mainNav} />
-        <div className="fixed bottom-0 left-0  z-20 flex w-full  py-4 sm:bottom-auto sm:left-auto sm:right-4 sm:top-32  sm:w-auto  ">
+        <div className="fixed bottom-0 left-0  flex w-full  py-4 sm:bottom-auto sm:left-auto sm:right-4 sm:top-32  sm:w-auto  ">
           <nav className="mn:gap-6   flex w-full  items-center justify-center gap-4 rounded-sm bg-slate-100/10 p-2 backdrop-blur-3xl sm:w-auto sm:flex-col ">
             {siteConfig.links &&
               siteConfig.links.map((slink) => {

@@ -58,8 +58,7 @@ export const siteConfig = {
       id: 1,
       name: "bloger website",
       image: "bloger-website.png",
-      isFinished: false,
-      errors: ["no database"],
+      isFinished: true,
       tec: [
         "t3 stack",
         "prisma",
@@ -77,7 +76,6 @@ export const siteConfig = {
       name: "multi step form",
       image: "multi-step-form.jpg",
       isFinished: true,
-      errors: null,
       tec: ["Next", "tailwindcss", "headless ui"],
       url: "https://multi-step-form-eok7-399yvwxfg-seraphf2p.vercel.app/",
       description: " a step by step form its just a demo no data will be used",
@@ -87,17 +85,15 @@ export const siteConfig = {
       name: "url shortener",
       image: "shorty.png",
       isFinished: true,
-      errors: ["no database"],
       tec: [" Next", "prisma", "jwt", "tailwindcss", "headless ui "],
       url: "https://shorty-omega.vercel.app/",
-      description: " url shortener website with authantication",
+      description: "full working url shortener website with authantication",
     },
     {
       id: 4,
       name: "Radiant",
       image: "Radiant.png",
       isFinished: true,
-      errors: null,
       tec: [
         "react",
         "typscript",
@@ -113,7 +109,6 @@ export const siteConfig = {
       name: "store-api",
       image: "api.jpeg",
       isFinished: true,
-      errors: null,
       tec: ["php", "laravel", "my sql"],
       url: "https://github.com/SeraphF2P/store-api",
       description:
@@ -176,11 +171,6 @@ export const siteConfig = {
       level: 60,
     },
     {
-      id: 9,
-      name: "three js",
-      level: 30,
-    },
-    {
       id: 10,
       name: "next",
       level: 80,
@@ -201,11 +191,6 @@ export const siteConfig = {
       level: 70,
     },
     {
-      id: 14,
-      name: "react fiber",
-      level: 30,
-    },
-    {
       id: 15,
       name: "next auth",
       level: 30,
@@ -214,6 +199,11 @@ export const siteConfig = {
       id: 16,
       name: "MySQL",
       level: 50,
+    },
+    {
+      id: 17,
+      name: "redux",
+      level: 70,
     },
   ],
   certificates: [

@@ -1,5 +1,3 @@
-import { Landing } from "@/sections/Landing"
-
 import "@/styles/globals.css"
 import { Metadata } from "next"
 import BgGradieant from "@/ui/BgGradieant"
@@ -8,6 +6,8 @@ import { siteConfig } from "@/config/site"
 import { fontOutfit, fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import { SiteHeader } from "@/components/site-header"
+
+import Background3D from "../components/ui/Background3D"
 
 export const metadata: Metadata = {
   title: {
@@ -38,15 +38,15 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <html lang="en" suppressHydrationWarning>
         <body
           className={cn(
-            "bg-background  relative  h-screen  font-sans antialiased ",
+            "bg-background  remove-scroll-bar relative h-screen overflow-y-scroll  pt-28   font-sans antialiased",
             fontSans.variable,
             fontOutfit.variable
           )}
         >
           <BgGradieant />
           <SiteHeader />
-          <Landing />
-          <main className=" min-h-screen ">{children}</main>
+          <Background3D />
+          {children}
         </body>
       </html>
     </>

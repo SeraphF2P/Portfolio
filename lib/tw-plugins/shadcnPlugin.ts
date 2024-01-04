@@ -44,6 +44,10 @@ export const shadcnPlugin = plugin(
         ".remove-scroll-bar::-webkit-scrollbar": {
           display: "none",
         },
+        ".custom_scrollBar": {
+          "@apply scrollbar-track-primary/40 scrollbar-w-1  scrollbar  remove-scroll-bar scrollbar-thumb-primary scrollbar-thumb-rounded-full": {}
+        }
+
       })
   },
   {

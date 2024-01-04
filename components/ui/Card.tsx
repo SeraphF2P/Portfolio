@@ -12,7 +12,6 @@ type ProjectType = {
   name: string
   image: string
   isFinished: boolean
-  errors: string[] | null
   tec: string[]
   url: string
   description: string
@@ -24,12 +23,11 @@ export function Card({
   name,
   tec,
   url,
-  errors,
   isFinished,
 }: ProjectType) {
   const [ref, { width: refWidth }] = useResizeObserver()
   return (
-    <div className=" xs:max-w-xs  block h-96 w-full max-w-[300px] cursor-pointer overflow-hidden rounded bg-slate-50/10 p-2  shadow  shadow-slate-50/30 backdrop-blur-sm transition-[colors_scale] duration-300 hover:scale-105   hover:bg-slate-100/30  ">
+    <div className="   block h-96 w-[280px] cursor-pointer overflow-hidden rounded bg-slate-50/10 p-2  shadow  shadow-slate-50/30 backdrop-blur-sm transition-[colors_scale] duration-300 hover:scale-105   hover:bg-slate-100/30  ">
       <div className=" bg-background/10 relative  h-full w-full overflow-hidden  rounded-sm   shadow-inner shadow-slate-950 ">
         <NextImage
           className="  aspect-video w-full opacity-80 "
@@ -59,23 +57,6 @@ export function Card({
                   in progress
                 </div>
               )}
-              {errors &&
-                errors.map((tec) => (
-                  <div
-                    key={tec}
-                    className=" rounded-sm bg-red-100 px-2 py-1 text-red-500 shadow-sm shadow-slate-700"
-                  >
-                    {tec}
-                  </div>
-                ))}
-              {tec.map((tec) => (
-                <div
-                  key={tec}
-                  className=" bg-background rounded-sm px-2 py-1 shadow-sm shadow-slate-700"
-                >
-                  {tec}
-                </div>
-              ))}
             </m.div>
           </div>
 

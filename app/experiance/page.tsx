@@ -7,18 +7,18 @@ import { siteConfig } from "../../config/site"
 
 const Page: NextPage = () => {
   return (
-    <m.div
+    <m.main
       initial={{ scaleY: 0 }}
       animate={{ scaleY: 1 }}
       transition={{ duration: 1 }}
-      className="   bg-primary/70 relative top-32 flex h-[500px] w-full origin-right justify-center pr-1  backdrop-blur-md sm:h-96  "
+      className=" relative   grid   h-[500px] w-full origin-right   sm:h-96  "
     >
-      <div className=" scrollbar-track-primary/40 scrollbar-w-1  scrollbar-thumb-rounded-full scrollbar-thumb-slate-50/80 scrollbar   relative flex flex-wrap  justify-center gap-4 overflow-y-scroll p-4   sm:px-40  ">
+      <div className=" z-40 custom_scrollBar  relative  m-auto flex flex-wrap  justify-center gap-4 overflow-y-scroll p-4   sm:px-40  ">
         {siteConfig.experiances.map((exp) => (
-          <Section {...exp} />
+          <Section key={exp.id} {...exp} />
         ))}
       </div>
-    </m.div>
+    </m.main>
   )
 }
 const Section = (props: {
@@ -28,7 +28,7 @@ const Section = (props: {
   info: string
 }) => {
   return (
-    <div className=" font-outfit border-primary flex w-full max-w-[320px]  origin-center  flex-col items-start   border-4   p-4  shadow-2xl  transition-[transform_colors] hover:scale-105  hover:bg-slate-200/10 ">
+    <div className="font-outfit border-primary flex w-full max-w-[320px] origin-center  flex-col  items-start border-4   p-4   shadow-2xl  backdrop-blur-md  transition-[transform_colors] hover:scale-105  hover:bg-slate-200/10 ">
       <h3 className=" font-semibold capitalize">{props.title}</h3>
       <p className=" my-4">{props.duration}</p>
       <p>{props.info}</p>
