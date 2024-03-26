@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.parallax-container {
+  transform-style: preserve-3d;
+  transform: translate3d(0, 0, -20px);
+  perspective: -20px;
+}
+.parallax-container > *:not(:nth-child(2n + 1)) {
+  transform-style: preserve-3d;
+  transform: translate3d(0, 0, 10px);
+  background-color: rgb(255, 0, 0, 0.4);
+}
+.parallax-container > *:not(:nth-child(2n)) {
+  transform-style: preserve-3d;
+  transform: translate3d(0, 0, 5px);
+  background-color: rgb(0, 128, 0, 0.4);
+}
