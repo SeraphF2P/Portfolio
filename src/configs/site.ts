@@ -7,24 +7,24 @@ export const siteConfig = {
   available: true,
   mainNav: [
     {
-      title: "home",
-      path: "/",
+      icon: "home",
+      path: "#home",
     },
     {
-      title: "projects",
-      path: "/projects",
+      icon: "skills",
+      path: "#skills",
     },
     {
-      title: "experiance",
-      path: "/experiance",
+      icon: "experiances",
+      path: "#experiances",
     },
     {
-      title: "skills",
-      path: "/skills",
+      icon: "certifications",
+      path: "#certifications",
     },
     {
-      title: "certificates",
-      path: "/certificates",
+      icon: "projects",
+      path: "#projects",
     },
   ],
   links: [
@@ -33,7 +33,7 @@ export const siteConfig = {
       link: "https://www.facebook.com/jafer.ali.395669?mibextid=ZbWKwL",
     },
     {
-      name: "github",
+      name: "email",
       link: "mailto:fanfar13@gmail.com",
     },
     {
@@ -53,159 +53,159 @@ export const siteConfig = {
       link: "https://www.linkedin.com/in/jafer-ali-701b06253?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B0Hzrf1QYTfWOTOSSTlSpNQ%3D%3D",
     },
   ],
-  projects: [
-    {
-      id: 1,
-      name: "bloger website",
-      image: "bloger-website.png",
-      isFinished: true,
-      tec: [
-        "t3 stack",
-        "prisma",
-        "RTQ",
-        "framer-motion",
-        "Next (pages)",
-        "clerk",
-        "radix ui",
-      ],
-      url: "https://bloger-website-seraphf2p.vercel.app/",
-      description: "bloger website more of a facebook app for blog articles ",
-    },
-    {
-      id: 2,
-      name: "multi step form",
-      image: "multi-step-form.jpg",
-      isFinished: true,
-      tec: ["Next", "tailwindcss", "headless ui"],
-      url: "https://multi-step-form-eok7-399yvwxfg-seraphf2p.vercel.app/",
-      description: " a step by step form its just a demo no data will be used",
-    },
-    {
-      id: 3,
-      name: "url shortener",
-      image: "shorty.png",
-      isFinished: true,
-      tec: [" Next", "prisma", "jwt", "tailwindcss", "headless ui "],
-      url: "https://shorty-omega.vercel.app/",
-      description: "full working url shortener website with authantication",
-    },
-    {
-      id: 4,
-      name: "Radiant",
-      image: "Radiant.png",
-      isFinished: true,
-      tec: [
-        "react",
-        "typscript",
-        "framer motion",
-        "tailwind",
-        "react router dom",
-      ],
-      url: "https://radiant-c986ebl8i-seraphf2p.vercel.app/",
-      description: "cosmatique product website consest of three pages ",
-    },
-    {
-      id: 5,
-      name: "store-api",
-      image: "api.jpeg",
-      isFinished: true,
-      tec: ["php", "laravel", "my sql"],
-      url: "https://github.com/SeraphF2P/store-api",
-      description:
-        "an api with simple dashboard ,authantication, cascading data fetching",
-    },
-  ],
+  projects: {
+    next: [
+      {
+        id: 1,
+        name: "bloger website",
+        image: "bloger-website.png",
+        isFinished: true,
+        tec: [
+          "t3 stack",
+          "prisma",
+          "RTQ",
+          "framer-motion",
+          "Next (pages)",
+          "clerk",
+          "radix ui",
+          "asdasdd",
+          "werwerwer",
+          "asd32"
+        ],
+        urls: {
+          live: "https://bloger-website-seraphf2p.vercel.app/",
+          github: "https://github.com/SeraphF2P/bloger-website",
+        },
+        description: "bloger website more of a facebook app for blog articles ",
+      },
+      {
+        id: 3,
+        name: "RecuitEase",
+        image: "recruitease.png",
+        isFinished: false,
+        tec: [" Next", "prisma", "next auth", "tailwindcss", "radix ui", "redux", "react hook form", "zod"],
+        urls: {
+          live: "https://recuitease.vercel.app/",
+          github: "https://github.com/SeraphF2P/RecuitEase",
+        },
+        description: "application tracking system (ats)",
+      },
+      {
+        id: 2,
+        name: "url shortener",
+        image: "shorty.png",
+        isFinished: true,
+        tec: [" Next", "prisma", "jwt", "tailwindcss", "headless ui "],
+        urls: {
+          live: "https://shorty-omega.vercel.app/",
+          github: "https://github.com/SeraphF2P/shorty",
+        },
+        description: "full working url shortener website with authantication",
+      },
+    ],
+    react: [
+      {
+        id: 1,
+        name: "Radiant",
+        image: "Radiant.png",
+        isFinished: true,
+        tec: [
+          "react",
+          "typscript",
+          "framer motion",
+          "tailwind",
+          "react router dom",
+        ],
+        urls: {
+          live: "https://radiant-c986ebl8i-seraphf2p.vercel.app/",
+          github: "https://bloger-website-seraphf2p.vercel.app/",
+        },
+        description: "cosmatique product website consest of three pages ",
+      },
+      {
+        id: 2,
+        name: "chatme",
+        image: "chatme.png",
+        isFinished: true,
+        tec: [
+          "react",
+          "typscript",
+          "framer motion",
+          "tailwind",
+          "react router dom",
+          "supabase",
+        ],
+        urls: {
+          live: "https://chat-r0zmkzxyg-seraphf2p.vercel.app/",
+          github: "https://github.com/SeraphF2P/ChatMe",
+        },
+        description: "full stack chat app  with real time feture",
+      },
+
+    ]
+  },
   experiances: [
     {
       id: 1,
       title: "internship at XCore corperation",
       duration: "10/2022~2/2023",
+      image: "xcore.logo.jpg",
       info: " react front-end developer internship ",
     },
     {
       id: 2,
-      title: "React tuoter",
-      duration: "~",
-      info: " teaching react for web development at NEN  ",
+      title: "sync intern",
+      duration: "1/3~31/3 2023",
+      image: "sync.intern.jpg",
+      info: "one month online remote internship  ",
     },
   ],
-  skills: [
-    {
-      id: 1,
-      name: "typscript",
-      level: 90,
+  skills: {
+    core: {
+      frontEnd: [
+        "typscript/Javascript",
+        "tailwind",
+        "framer motion",
+        "react hook form",
+        "zod",
+        "axios",
+        "radix ui",
+        "react router dom",
+        "RTQ",
+      ],
+      backEnd: [
+        "next",
+        "prisma",
+        "next auth",
+        "TRPC",
+      ]
     },
-    {
-      id: 2,
-      name: "javascript",
-      level: 100,
+    intermediate: {
+      frontEnd: [
+        "redux",
+        "sass",
+        "bootstrap",
+        "formik",
+        "yup",
+        "styled component",
+        "material ui",
+      ],
+      backEnd: [
+      ],
     },
-    {
-      id: 3,
-      name: "sass",
-      level: 50,
+    beginner: {
+      frontEnd: [
+        "react fiber", "three js"],
+      backEnd: [
+        "node",
+        "express",
+        "php",
+        "laravel",
+        "MySQL",
+      ],
     },
-    {
-      id: 4,
-      name: "tailwind",
-      level: 90,
-    },
-    {
-      id: 5,
-      name: "bootstrap",
-      level: 70,
-    },
-    {
-      id: 6,
-      name: "framer motion",
-      level: 80,
-    },
-    {
-      id: 7,
-      name: "php",
-      level: 60,
-    },
-    {
-      id: 8,
-      name: "laravel",
-      level: 60,
-    },
-    {
-      id: 10,
-      name: "next",
-      level: 80,
-    },
-    {
-      id: 11,
-      name: "prisma",
-      level: 70,
-    },
-    {
-      id: 12,
-      name: "TRPC",
-      level: 40,
-    },
-    {
-      id: 13,
-      name: "RTQ",
-      level: 70,
-    },
-    {
-      id: 15,
-      name: "next auth",
-      level: 30,
-    },
-    {
-      id: 16,
-      name: "MySQL",
-      level: 50,
-    },
-    {
-      id: 17,
-      name: "redux",
-      level: 70,
-    },
-  ],
+
+  },
   certificates: [
     {
       id: 1,
@@ -278,4 +278,5 @@ export const siteConfig = {
       Credential_ID: "3265297BD75",
     },
   ],
-}
+  cv: "Jaffar.ali.cv.pdf"
+} as const

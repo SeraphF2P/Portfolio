@@ -1,18 +1,20 @@
 import plugin from "tailwindcss/plugin";
-
 export const MyPlugin = plugin(
   ({ addBase, addUtilities }) => {
     addBase({
       ":root": {
         "--neutral": "30,41,59",
-        "--neutral-revert": "226,232,240",
         "--neutral-hover": "63,63,70",
-        "--primary": "120,120,250",
-        "--primary-hover": "100,100,230",
-        "--alert": "200,50,50",
+        "--neutral-revert": "226,232,240",
+        "--primary": "135,43,229",
+        "--primary-contant": "255,255,255",
+        "--primary-hover": "161,88,235",
+        "--secondary": "43,137,229",
+        "--secondary-hover": "24,111,197",
+        "--alert": "229,43,43",
         "--alert-hover": "220,70,70",
-        "--success": "110,231,183",//? emerald 300
-        "--success-hover": "130,251,203",
+        "--success": "43,229,43",
+        "--success-hover": "110,231,183",//? emerald 300
         "--info": "8,145,178", //? cyan 600 
         "--info-hover": "28,165,198",
         "--warn": "245,158,11",
@@ -24,11 +26,9 @@ export const MyPlugin = plugin(
       }
     });
     addBase({
-
       body: {
         "@apply bg-neutral  h-svh text-neutral-revert": {},
         "font-feature-settings": '"rlig" 1, "calt" 1',
-
       },
       h1: { "@apply capitalize text-2xl": {} },
       h2: { "@apply capitalize text-xl": {} },
@@ -63,7 +63,18 @@ export const MyPlugin = plugin(
         background: "rgb(var(--primary-hover))",
         width: "16px"
       },
-
+      '.backface-visible': {
+        'backface-visibility': 'visible',
+        '-moz-backface-visibility': 'visible',
+        '-webkit-backface-visibility': 'visible',
+        '-ms-backface-visibility': 'visible'
+      },
+      '.backface-hidden': {
+        'backface-visibility': 'hidden',
+        '-moz-backface-visibility': 'hidden',
+        '-webkit-backface-visibility': 'hidden',
+        '-ms-backface-visibility': 'hidden'
+      },
       ".text-border": {
         "text-shadow":
           `-1px -1px 0 rgb(var(--neutral-revert)),
@@ -75,12 +86,10 @@ export const MyPlugin = plugin(
   },
   {
     theme: {
-      container: {
-        center: true,
-        padding: "2rem",
-        screens: {
-          "2xl": "1400px",
-        },
+
+      fontFamily: {
+        inter: ["var(--font-inter)"],
+        outfit: ["var(--font-outfit)"]
       },
       extend: {
         colors: {
@@ -88,11 +97,14 @@ export const MyPlugin = plugin(
           "neutral-revert": "rgb(var(--neutral-revert),<alpha-value>)",
           primary: "rgb(var(--primary),<alpha-value>)",
           "primary-hover": "rgb(var(--primary-hover),<alpha-value>)",
+          "primary-contant": "rgb(var(----primary-contant),<alpha-value>)",
           variant: "rgb(var(--variant,0,0,0),<alpha-value>)",
           alert: "rgb(var(--alert),<alpha-value>)",
           "alert-hover": "rgb(var(--alert-hover),<alpha-value>)",
           success: "rgb(var(--success),<alpha-value>)",
           "success-hover": "rgb(var(--success-hover),<alpha-value>)",
+          secondary: "rgb(var(--secondary),<alpha-value>)",
+          "secondary-hover": "rgb(var(--secondary-hover),<alpha-value>)",
           info: "rgb(var(--info),<alpha-value>)",
           "info-hover": "rgb(var(--info-hover),<alpha-value>)",
           warn: "rgb(var(--warn),<alpha-value>)",

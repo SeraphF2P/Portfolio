@@ -6,7 +6,6 @@ type UseScrollDirType = Parameters<typeof useScroll>["0"] & {
   defaultDir?: 1 | -1 | 0
 }
 const defaults: UseScrollDirType = {
-  onHoldDelay: 2000,
   defaultDir: 0,
   axis: "y",
   offset: ["start start", "end end"],
@@ -18,7 +17,7 @@ export function useScrollDir(parameters?: UseScrollDirType) {
     ...defaults,
     ...parameters
   }
-  const { onHoldDelay, defaultDir, ...useScrollOptions } = values
+  const { onHoldDelay = 2, defaultDir, ...useScrollOptions } = values
 
   const timeout = useRef<ReturnType<typeof setTimeout> | undefined>()
   const [dir, setdir] = useState(defaultDir);
@@ -36,7 +35,7 @@ export function useScrollDir(parameters?: UseScrollDirType) {
     clearTimeout(timeout.current);
     timeout.current = setTimeout(() => {
       setdir(0);
-    }, onHoldDelay);
+    }, onHoldDelay * 1000);
   });
 
   return dir

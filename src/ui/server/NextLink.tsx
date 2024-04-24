@@ -10,9 +10,6 @@ interface NextLinkProps extends LinkProps, variantsType {
 export const NextLink: FC<NextLinkProps> = ({
   className,
   variant,
-  shape,
-  deActivated,
-  hover,
   ...props
 }) => {
   return (
@@ -20,9 +17,6 @@ export const NextLink: FC<NextLinkProps> = ({
       className={cn(
         variants({
           variant: variant || "none",
-          shape,
-          deActivated: deActivated ?? "link",
-          hover: hover ?? "flicker",
           className: "cursor-pointer",
         }),
         className,

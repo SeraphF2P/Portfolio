@@ -2,18 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-.parallax-container {
-  transform-style: preserve-3d;
-  transform: translate3d(0, 0, -20px);
-  perspective: -20px;
+.bubble-shadow {
+  --b-depth: 5px;
+  --b-depth-inset: calc(var(--b-depth) * -1);
+  --b-blur: calc(var(--b-depth) * 1.5);
+  box-shadow: inset var(--b-depth) var(--b-depth) var(--b-blur)
+      rgb(0, 0, 0, 0.4),
+    inset var(--b-depth-inset) var(--b-depth-inset) var(--b-blur)
+      rgb(255, 255, 255, 0.4);
 }
-.parallax-container > *:not(:nth-child(2n + 1)) {
-  transform-style: preserve-3d;
-  transform: translate3d(0, 0, 10px);
-  background-color: rgb(255, 0, 0, 0.4);
+
+.aurora-effect {
+  background: radial-gradient(
+    100% 100% at 50% 20%,
+    transparent 50%,
+    rgb(255, 255, 255, 0.7)
+  );
 }
-.parallax-container > *:not(:nth-child(2n)) {
-  transform-style: preserve-3d;
-  transform: translate3d(0, 0, 5px);
-  background-color: rgb(0, 128, 0, 0.4);
+.text-shadow {
+  text-shadow: 2px 2px 1px rgb(0, 0, 0);
 }
