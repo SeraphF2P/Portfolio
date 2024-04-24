@@ -2,7 +2,7 @@
 
 import { useViewportSize } from "@mantine/hooks";
 import { motion as m, useScroll } from "framer-motion";
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 type FullPageSvgProps = {};
 
@@ -11,22 +11,21 @@ export const FullPageSvg = ({}: FullPageSvgProps) => {
 
   const viewport = useViewportSize();
   const storkWidth = viewport.width > 420 ? 16 : 10;
-     const pathHeight = 1366;
-    const pathWidth = 768;
-  const [config, setconfig] = useState({
+  const [config, setconfig] = useState<{
     container: {
-      height: pathHeight,
-      width: pathWidth
-    },
+      height: number;
+      width: number;
+    };
     defaultPenStart: {
-      x: 0,
-      y: 0
-    },
-    scaleY: 1,
-    scaleX: 1
-  });
-  useLayoutEffect(() => {
- 
+      x: number;
+      y: number;
+    };
+    scaleY: number;
+    scaleX: number;
+  }>();
+  useEffect(() => {
+    const pathHeight = 1366;
+    const pathWidth = 768;
     const x = (window.innerWidth - storkWidth) / 2;
     const y = (window.innerHeight + storkWidth) / 2;
     const container = {
@@ -47,6 +46,7 @@ export const FullPageSvg = ({}: FullPageSvgProps) => {
     setconfig(conf);
   }, [storkWidth, viewport.height, viewport.width]);
 
+  if (config == undefined) return null;
   return (
     <>
       <svg
