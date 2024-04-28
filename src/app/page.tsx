@@ -189,7 +189,7 @@ const Page: NextPage = () => {
             perspective: 1000,
             transformStyle: "preserve-3d",
           }}
-          className="container  m-auto flex flex-wrap items-center justify-center gap-2"
+          className="container  m-auto flex flex-wrap items-center justify-center gap-4"
         >
           {siteConfig.projects.react.map((project) => {
             return (
@@ -200,6 +200,7 @@ const Page: NextPage = () => {
       </div>
        </div>
       </section>
+      {/* footer */}
      <section   className=" grid relative  h-svh  py-8    ">
         <div className=" m-auto">
             <div className="text-shadow relative hover:scale-105 hover:bg-primary-hover  transition-all duration-300 flex items-center justify-center gap-4 rounded-full border-4 border-primary  px-4 py-2 capitalize ">
