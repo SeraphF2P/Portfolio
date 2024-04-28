@@ -12,6 +12,11 @@ type layoutProps = {
 };
 export const metadata: Metadata = {
   title: "jaffer ali portfolio",
+  openGraph: {
+    images: {
+      url:"portifolio-opengraph-image.jpg"
+    }
+  }
 };
 const outfit = Outfit({
   variable: "--font-outfit",

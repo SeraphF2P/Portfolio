@@ -9,7 +9,7 @@ const Page: NextPage = () => {
     <>
       <section id="home" className=" relative  grid min-h-svh py-8 ">
         <div className=" m-auto">
-          <div className=" my-4 font-outfit">
+          <div className=" text-shadow my-4 font-outfit">
             <h2 className="   text-4xl capitalize">web developer </h2>
             <p className="   pl-1 text-base">ready for work</p>
           </div>
