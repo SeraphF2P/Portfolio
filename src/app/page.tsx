@@ -7,7 +7,7 @@ import { MagicCard } from "./_component/MagicCard";
 const Page: NextPage = () => {
   return (
     <>
-      <section id="home" className=" relative  grid min-h-svh py-8 ">
+      <section id="home" className=" relative  grid min-h-screen py-8 ">
         <div className=" m-auto">
           <div className=" text-shadow my-4 font-outfit">
             <h2 className="   text-4xl capitalize">web developer </h2>
@@ -16,7 +16,7 @@ const Page: NextPage = () => {
         </div>
       </section>
       {/* skills */}
-      <section  id="skills" className=" relative  grid min-h-svh py-8  ">
+      <section  id="skills" className=" relative  grid min-h-screen py-8  ">
         <div className="   flex flex-col items-center   justify-center">
           <MotionElement.PopUp className=" my-4">
             <h2>my skills</h2>
@@ -119,7 +119,7 @@ const Page: NextPage = () => {
         </div>
       </section>
       {/* experiances */}
-      <section  id="experiances"  className="  grid min-h-svh py-8  ">
+      <section  id="experiances"  className="  grid min-h-screen py-8  ">
         <div className="  m-auto flex flex-col items-center   justify-center">
           <MotionElement.PopUp className=" my-4">
             <h2>experiances</h2>
@@ -138,7 +138,7 @@ const Page: NextPage = () => {
         </div>
       </section>
       {/* certifications */}
-      <section  id="certifications" className=" relative  grid min-h-svh py-8    ">
+      <section  id="certifications" className=" relative  grid min-h-screen py-8    ">
         <div className="  flex flex-col items-center   justify-center">
           <MotionElement.PopUp className=" my-4">
             <h2>certifications</h2>
@@ -164,7 +164,7 @@ const Page: NextPage = () => {
         </div>
       </section>
       {/* projects */}
-      <section  id="projects" className=" relative  grid min-h-svh py-8    ">
+      <section  id="projects" className=" relative  grid min-h-screen py-8    ">
         <div className=" m-auto">
           <div>
        <h2 className=" capitalize  text-center  my-8  text-shadow text-5xl">next</h2>
